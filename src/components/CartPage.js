@@ -22,7 +22,6 @@ const CartPage = () => {
         {
           items: cartItems,
           totalAmount,
-          userId: "64abcdef12345678", // fake for now
         },
         {
           headers: {
