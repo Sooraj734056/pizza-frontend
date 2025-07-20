@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+:root {
+  --primary-color: #ff6600;
+  --dark-bg: #111;
+  --light-bg: #fff;
+  --text-dark: #111;
+  --text-light: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body, html, #root {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light-bg);
+  color: var(--text-dark);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* pushes footer to bottom */
+}
+
+header {
+  background: linear-gradient(to right, #ff6600, #ff9900);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+}
+
+footer {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5rem 8%;
+  min-height: 80vh;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-text {
+  max-width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.hero-text button {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 140%;
+  height: auto;
+  object-fit: cover;
+  transform: translate(20%, -10%) rotate(-5deg);
+  animation: floatPizza 5s ease-in-out infinite;
+}
+
+@keyframes floatPizza {
+  0% { transform: translate(20%, -10%) rotate(-5deg); }
+  50% { transform: translate(20%, -15%) rotate(-5deg); }
+  100% { transform: translate(20%, -10%) rotate(-5deg); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    transform: none;
   }
 }

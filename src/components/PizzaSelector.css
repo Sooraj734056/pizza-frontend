@@ -1,0 +1,23 @@
+/* src/components/PizzaSelector.css */
+.pizza-selector {
+  background-color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  overflow-x: auto;
+  border-top: 1px solid #333;
+}
+
+.pizza-selector img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.pizza-selector img:hover {
+  transform: scale(1.1);
+}

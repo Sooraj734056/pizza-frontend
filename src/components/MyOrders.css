@@ -1,0 +1,90 @@
+.my-orders-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  padding: 2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.my-orders-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00ff84;
+  margin-bottom: 2rem;
+}
+
+.no-orders {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.order-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s;
+}
+
+.order-card:hover {
+  transform: scale(1.02);
+  border-color: #00ff84;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.order-id {
+  color: #00ff84;
+  font-weight: bold;
+}
+
+.order-status {
+  color: #ffce00;
+  font-weight: 600;
+}
+
+.order-items {
+  padding: 0.5rem 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  color: #eee;
+}
+
+.item-name {
+  flex: 1;
+}
+
+.item-qty,
+.item-price {
+  width: 80px;
+  text-align: right;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}

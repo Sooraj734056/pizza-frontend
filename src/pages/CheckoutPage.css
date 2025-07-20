@@ -1,0 +1,46 @@
+.checkout-container {
+  max-width: 600px;
+  margin: auto;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #2e2e3e;
+  color: #fff;
+}
+
+.payment-methods label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
